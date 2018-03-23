@@ -94,15 +94,66 @@ def save_param (user_id,nom,znak):
         sql = "UPDATE user SET setting06 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
         cursor.execute(sql)
         conn.commit()
+    if nom == 7:        
+        sql = "UPDATE user SET setting07 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 8:        
+        sql = "UPDATE user SET setting08 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 9:        
+        sql = "UPDATE user SET setting09 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 10:        
+        sql = "UPDATE user SET setting10 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 11:        
+        sql = "UPDATE user SET setting11 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 12:        
+        sql = "UPDATE user SET setting12 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 13:        
+        sql = "UPDATE user SET setting13 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 14:        
+        sql = "UPDATE user SET setting14 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 15:        
+        sql = "UPDATE user SET setting15 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 16:        
+        sql = "UPDATE user SET setting16 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 17:        
+        sql = "UPDATE user SET setting17 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+    if nom == 18:        
+        sql = "UPDATE user SET setting18 = '"+str(znak)+"' WHERE user_id = '"+str(user_id)+"' "
+        cursor.execute(sql)
+        conn.commit()
+
+
+
 
 def load_param (user_id,nom):
     conn = sqlite3.connect("user.sqlite") 
     cursor = conn.cursor()
-    sql = "select id,user_id,setting01,setting02,setting03,setting04,setting05,setting06 from user where user_id = '"+str(user_id)+"'"
+    sql = "select id,user_id,setting01,setting02,setting03,setting04,setting05,setting06,setting07,setting08,setting09,setting10,setting11,setting12,setting13,setting14,setting15,setting16,setting17,setting18 from user where user_id = '"+str(user_id)+"'"
     cursor.execute(sql)
     data = cursor.fetchall()
     for row in data:
-        id,user_id,setting01,setting02,setting03,setting04,setting05,setting06 = row
+        id,user_id,setting01,setting02,setting03,setting04,setting05,setting06,setting07,setting08,setting09,setting10,setting11,setting12,setting13,setting14,setting15,setting16,setting17,setting18 = row
         if nom == 1:
             print ('[+1]',user_id,setting01)
             return setting01
@@ -121,6 +172,54 @@ def load_param (user_id,nom):
         if nom == 6:
             print ('[+6]',user_id,setting06)
             return setting06
+        if nom == 7:
+            print ('[+6]',user_id,setting07)
+            return setting06
+        if nom == 8:
+            print ('[+6]',user_id,setting08)
+            return setting06
+        if nom == 9:
+            print ('[+6]',user_id,setting09)
+            return setting06
+        if nom == 10:
+            print ('[+6]',user_id,setting10)
+            return setting06
+        if nom == 11:
+            print ('[+6]',user_id,setting11)
+            return setting06
+        if nom == 12:
+            print ('[+6]',user_id,setting12)
+            return setting06
+        if nom == 13:
+            print ('[+6]',user_id,setting13)
+            return setting06
+        if nom == 14:
+            print ('[+6]',user_id,setting14)
+            return setting06
+        if nom == 15:
+            print ('[+6]',user_id,setting15)
+            return setting06
+        if nom == 16:
+            print ('[+6]',user_id,setting16)
+            return setting06
+        if nom == 17:
+            print ('[+6]',user_id,setting17)
+            return setting06
+        if nom == 18:
+            print ('[+6]',user_id,setting18)
+            return setting06
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def menu_agreg ():
@@ -139,7 +238,25 @@ def endfinish (user_id):
             setting03 = load_param (user_id,3)
             setting04 = load_param (user_id,4)
             setting05 = load_param (user_id,5)
-            message_out = 'Ваша заявка на подключение к такси передана специалисту. В связи с большим количеством обращений, специалист подключения свяжется с Вами в течение 2-3 часов.\n<b>Ваши ответы:</b>\n\n'+setting01+'\n'+setting02+'\n'+setting03+'\n'+setting04+'\n'+setting05+'\n'
+            setting06 = load_param (user_id,6)
+            setting07 = load_param (user_id,7)
+            setting08 = load_param (user_id,8)
+            setting09 = load_param (user_id,9)
+            setting10 = load_param (user_id,10)
+            setting11 = load_param (user_id,11)
+            setting12 = load_param (user_id,12)
+            setting13 = load_param (user_id,13)
+            setting14 = load_param (user_id,14)
+            setting15 = load_param (user_id,15)
+            setting16 = load_param (user_id,16)
+            setting17 = load_param (user_id,17)
+            setting18 = load_param (user_id,18)
+            
+            message_out = 'Ваша заявка на подключение к такси передана специалисту. В связи с большим количеством обращений, специалист подключения свяжется с Вами в течение 2-3 часов.\n<b>Ваши ответы:</b>\n\n'
+            message_out = message_out + setting01+'\n'+setting02+'\n'+setting03+'\n'+setting04+'\n'+setting05+'\n'
+            message_out = message_out + setting06+'\n'+setting07+'\n'+setting08+'\n'+setting09+'\n'+setting10+'\n'
+            message_out = message_out + setting11+'\n'+setting12+'\n'+setting13+'\n'+setting14+'\n'+setting15+'\n'
+            message_out = message_out + setting16+'\n'+setting17
             markup = menu_main ()
             bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
             ###,reply_markup=markup
@@ -170,6 +287,84 @@ def endfinish (user_id):
                     img = open('/root/Language/'+setting05+'', 'rb')
                     bot.send_photo(user_id, img)                
 
+
+                if setting06.find ('photos') != -1:            
+                    message_out = 'фото на 6 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting06+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting07.find ('photos') != -1:            
+                    message_out = 'фото на 7 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting07+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting08.find ('photos') != -1:            
+                    message_out = 'фото на 8 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting08+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting09.find ('photos') != -1:            
+                    message_out = 'фото на 9 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting09+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting10.find ('photos') != -1:            
+                    message_out = 'фото на 10 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting10+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting11.find ('photos') != -1:            
+                    message_out = 'фото на 11 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting11+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting12.find ('photos') != -1:            
+                    message_out = 'фото на 12 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting12+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting13.find ('photos') != -1:            
+                    message_out = 'фото на 13 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting13+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting14.find ('photos') != -1:            
+                    message_out = 'фото на 14 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting14+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting15.find ('photos') != -1:            
+                    message_out = 'фото на 15 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting15+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting16.find ('photos') != -1:            
+                    message_out = 'фото на 16 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting16+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting17.find ('photos') != -1:            
+                    message_out = 'фото на 17 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting17+'', 'rb')
+                    bot.send_photo(user_id, img)                
+
+                if setting18.find ('photos') != -1:            
+                    message_out = 'фото на 18 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting18+'', 'rb')
+                    bot.send_photo(user_id, img)                
             
             
     
@@ -191,18 +386,31 @@ def send_welcome(message):
     message    = message.text
     print ('[+]',message,user_id)
     save_status (user_id,username,'start')
-    ##save_param (user_id,1,'')
-    ##save_param (user_id,2,'')
-    ##save_param (user_id,3,'')
-    ##save_param (user_id,4,'')
-    ##save_param (user_id,5,'')
-    #3save_param (user_id,6,'')
+    save_param (user_id,1,'')
+    save_param (user_id,2,'')
+    save_param (user_id,3,'')
+    save_param (user_id,4,'')
+    save_param (user_id,5,'')
+    save_param (user_id,6,'')
+    save_param (user_id,7,'')
+    save_param (user_id,8,'')
+    save_param (user_id,9,'')
+    save_param (user_id,10,'')
+    save_param (user_id,11,'')
+    save_param (user_id,12,'')
+    save_param (user_id,13,'')
+    save_param (user_id,14,'')
+    save_param (user_id,15,'')
+    save_param (user_id,16,'')
+    save_param (user_id,17,'')
+    save_param (user_id,18,'')
+    
     message_out = 'Добрый День Вас приветствует компания RUMTAXI!\nНаш бот поможет вам подключиться к агрегаторам такси удаленно!\nПожалуйста введите свой номер телефона. и ответьте на вопросы бота:'
     markup =  menu_main ()
     bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)  
-    message_out = 'Ваше ФИО?'    
+    message_out = '1.Ваше ФИО полностью?'    
     bot.send_message(user_id,message_out,parse_mode='HTML')    
-    save_status (user_id,username,'FIO')
+    save_status (user_id,username,'F001')
 
 @bot.message_handler(content_types=["text"])
 def repeat_all_messages(message): 
@@ -215,7 +423,6 @@ def repeat_all_messages(message):
     print ('[+]',message)
     status = load_staus (user_id)
     print ('[+]',status)
-    
     Labeladmin = 'Good'
 
     if message.find ('Главное меню') != -1:
@@ -232,26 +439,37 @@ def repeat_all_messages(message):
         bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
         Labeladmin = 'admin' 
         save_status (user_id,username,'qwest')
-
-
-    if message.find ('Админка') != -1:
-    
-        if str(user_id) == '260637021':    
+        
+    if message.find ('Админка') != -1:    
+        ###if str(user_id) == '260637021'
+        if 1==1:     
             markup = menu_select_zakaz ()
             message_out = 'Главное меню'
             markup = menu_main ()        
             conn = sqlite3.connect("user.sqlite") 
             cursor = conn.cursor()
-            sql = "select id,user_id,username,name,first_name,last_name,setting01,setting02,setting03,setting04,setting05,setting06 from user where 1=1"        
+            sql = "select id,user_id,username,name,first_name,last_name,setting01,setting02,setting03,setting04,setting05,setting06,setting07,setting08,setting09,setting10,setting11,setting12,setting13,setting14,setting15,setting16,setting17,setting18 from user where 1=1"        
             message_out = 'Админка'
             bot.send_message(user_id,message_out,parse_mode='HTML')        
             cursor.execute(sql)
             data = cursor.fetchall()
             for row in data:
-                id_v,user_id_v,username_v,name_v,first_name_v,last_name_v,setting01,setting02,setting03,setting04,setting05,setting06 = row   
+                id_v,user_id_v,username_v,name_v,first_name_v,last_name_v,setting01,setting02,setting03,setting04,setting05,setting06,setting07,setting08,setting09,setting10,setting11,setting12,setting13,setting14,setting15,setting16,setting17,setting18 = row   
                 message_out = '<b>id user: '+str(user_id_v)+'</b>\n'+'username: '+str(username_v)+'\n'+'first_name: '+str(first_name_v)+'\n'
                 message_out = message_out +'last_name: '+str(last_name)+'\n'+'setting01: '+str(setting01)+'\n'+'setting02: '+str(setting02)+'\n'+'setting03: '+str(setting03)+'\n'
-                message_out = message_out + 'setting03: '+str(setting03)+'\n'+'setting04: '+str(setting04)+'\n'+'setting05: '+str(setting05)+'\n'+'setting06: '+str(setting06)
+                message_out = message_out + 'setting03: '+str(setting03)+'\n'+'setting04: '+str(setting04)+'\n'+'setting05: '+str(setting05)+'\n'+'setting06: '+str(setting06)+'\n'
+                message_out = message_out + 'setting07: '+str(setting07)+'\n' 
+                message_out = message_out + 'setting08: '+str(setting08)+'\n'
+                message_out = message_out + 'setting09: '+str(setting09)+'\n'
+                message_out = message_out + 'setting10: '+str(setting10)+'\n'
+                message_out = message_out + 'setting11: '+str(setting11)+'\n'
+                message_out = message_out + 'setting12: '+str(setting12)+'\n'
+                message_out = message_out + 'setting13: '+str(setting13)+'\n'
+                message_out = message_out + 'setting14: '+str(setting14)+'\n'
+                message_out = message_out + 'setting15: '+str(setting15)+'\n'
+                message_out = message_out + 'setting16: '+str(setting16)+'\n'
+                message_out = message_out + 'setting17: '+str(setting17)+'\n'
+                message_out = message_out + 'setting18: '+str(setting18)+'\n'
                 bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
                 Labeladmin = 'admin'
 
@@ -284,21 +502,95 @@ def repeat_all_messages(message):
                     bot.send_message(user_id,message_out,parse_mode='HTML')
                     img = open('/root/Language/'+setting06+'', 'rb')
                     bot.send_photo(user_id, img)   
+                    
+                if setting07.find ('photos') != -1:            
+                    message_out = 'фото на 7 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting07+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting08.find ('photos') != -1:            
+                    message_out = 'фото на 8 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting08+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting09.find ('photos') != -1:            
+                    message_out = 'фото на 9 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting09+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting10.find ('photos') != -1:            
+                    message_out = 'фото на 10 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting10+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting11.find ('photos') != -1:            
+                    message_out = 'фото на 11 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting11+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting12.find ('photos') != -1:            
+                    message_out = 'фото на 12 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting12+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting13.find ('photos') != -1:            
+                    message_out = 'фото на 13 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting13+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting14.find ('photos') != -1:            
+                    message_out = 'фото на 14 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting14+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting15.find ('photos') != -1:            
+                    message_out = 'фото на 15 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting15+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting16.find ('photos') != -1:            
+                    message_out = 'фото на 16 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting16+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting17.find ('photos') != -1:            
+                    message_out = 'фото на 17 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting17+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                if setting18.find ('photos') != -1:            
+                    message_out = 'фото на 18 вопрос'
+                    bot.send_message(user_id,message_out,parse_mode='HTML')
+                    img = open('/root/Language/'+setting18+'', 'rb')
+                    bot.send_photo(user_id, img)   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
         else:
             message_out = 'Ваш код '+str(user_id)+' Вы не администратор.'
-            bot.send_message(user_id,message_out,parse_mode='HTML')        
-
-        
-        
-                                         
-
-                
-
-                
+            bot.send_message(user_id,message_out,parse_mode='HTML')                        
             Labeladmin = 'admin'
-
-            
-                           
 
     if Labeladmin == 'Good':
         if message.find ('меню') != -1:
@@ -328,55 +620,151 @@ def repeat_all_messages(message):
                 keyboard = types.InlineKeyboardMarkup(row_width=1)
                 keyboard.add(types.InlineKeyboardButton(text='delete', callback_data='delete_'+str(id))) 
                 bot.send_message(user_id,message_out,parse_mode='HTML', reply_markup=keyboard)
-            save_status (user_id,username,'')                
+            save_status (user_id,username,'')                                                                                         
                           
-        if status == 'FIO': 
+        if status == 'F001': 
             message_out = 'Спасибо'
             bot.send_message(user_id,message_out,parse_mode='HTML')
             save_param (user_id,1,message)
-            save_status (user_id,username,'agreg')
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  стс. водительское удостоверение'
+            save_status (user_id,username,'F002')
+            message_out = '2.Ваш номер телефона?'
             bot.send_message(user_id,message_out,parse_mode='HTML')
     
-        if status == 'agreg': 
+        if status == 'F002': 
             message_out = 'Спасибо'
             bot.send_message(user_id,message_out,parse_mode='HTML')
             save_param (user_id,2,message)
-            save_status (user_id,username,'city')
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  паспорт страница с фотографией'
-            markup = menu_main ()
-            bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
-
-        if status == 'city': 
+            save_status (user_id,username,'F003')
+            message_out = '3.Марка Вашего атомобиля?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F003': 
             message_out = 'Спасибо'
             bot.send_message(user_id,message_out,parse_mode='HTML')
             save_param (user_id,3,message)
-            save_status (user_id,username,'connect')
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  Лицензия такси'
-            markup = menu_main ()
-            bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
-
-        if status == 'connect': 
+            save_status (user_id,username,'F004')
+            message_out = '4.Год выпуска?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+                
+        if status == 'F004': 
             message_out = 'Спасибо'
             bot.send_message(user_id,message_out,parse_mode='HTML')
             save_param (user_id,4,message)
-            save_status (user_id,username,'finish')
-            markup = menu_main ()
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  справка об отсутствии судимости.'
-            bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
-            markup = menu_main ()
+            save_status (user_id,username,'F005')
+            message_out = '5.Стаж работы в Такси?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
             
-        if status == 'finish':            
+        if status == 'F005': 
             message_out = 'Спасибо'
             bot.send_message(user_id,message_out,parse_mode='HTML')
             save_param (user_id,5,message)
+            save_status (user_id,username,'F006')
+            message_out = '6.Пришлите фото СТС-информация об автомобиле!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F006': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,6,message)
+            save_status (user_id,username,'F007')
+            message_out = '7.Пришлите фото водительского удостоверения(лицевая сторона)!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F007': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,7,message)
+            save_status (user_id,username,'F008')
+            message_out = '8.Пришлите фото водительского удостоверения (обратная сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F008': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,8,message)
+            save_status (user_id,username,'F009')
+            message_out = '9.Пришлите фото Справки о наличии(отсутствии судимости)-если нет то напишите слово-НЕТ!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F009': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,9,message)
+            save_status (user_id,username,'F010')
+            message_out = '10.Пришлите фото Медицинской справки-если нет то напишите слово-НЕТ!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F010': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,10,message)
+            save_status (user_id,username,'F011')
+            message_out = '11.Пришлите фото Лицензии на осуществеление таксомоторной деятельности.(ЛИЦЕВАЯ СТОРОНА)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F011': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,11,message)
+            save_status (user_id,username,'F012')
+            message_out = '12.Пришлите фото ОСАГО(лицевая сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F012': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,12,message)
+            save_status (user_id,username,'F013')
+            message_out = '13.Пришлите фото ОСАГО(обратная сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F013': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,13,message)
+            save_status (user_id,username,'F014')
+            message_out = '14.Пришлите фото автомобиля сбоку(Гос.Номер должен быть виден)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F014': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,14,message)
+            save_status (user_id,username,'F015')
+            message_out = '15.Пришлите фото автомобиля(задние сиденья)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F015': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,15,message)
+            save_status (user_id,username,'F016')
+            message_out = '16.Пришлите фото детского кресла(если нет пишем слово НЕТ)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F016': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,16,message)
+            save_status (user_id,username,'F017')
+            message_out = '17.Пришлите фото Паспорта(Разворот с фотографией)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F017': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,17,message)
+            save_status (user_id,username,'finish')
+            message_out = '18.В каком городе планируете работать?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'finish': 
+            message_out = 'Спасибо'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            save_param (user_id,18,message)
             save_status (user_id,username,'')
             endfinish (user_id)
-
-
-
-            
-            
+                                      
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
     if call.message:
@@ -421,19 +809,109 @@ def handle_docs_photo(message):
             markup = menu_main ()
             bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
             
-        if status == 'city': 
-            save_param (user_id,3,src)
-            save_status (user_id,username,'connect')
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  Лицензия такси'
-            markup = menu_main ()
-            bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)            
+
+        if status == 'F001': 
+            save_param (user_id,1,src)
+            save_status (user_id,username,'F002')
+            message_out = '2.Ваш номер телефона?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
     
-        if status == 'connect': 
+        if status == 'F002': 
+            save_param (user_id,2,src)
+            save_status (user_id,username,'F003')
+            message_out = '3.Марка Вашего атомобиля?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F003': 
+            save_param (user_id,3,src)
+            save_status (user_id,username,'F004')
+            message_out = '4.Год выпуска?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+                
+        if status == 'F004': 
             save_param (user_id,4,src)
+            save_status (user_id,username,'F005')
+            message_out = '5.Стаж работы в Такси?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F005': 
+            save_param (user_id,5,src)
+            save_status (user_id,username,'F006')
+            message_out = '6.Пришлите фото СТС-информация об автомобиле!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F006': 
+            save_param (user_id,6,src)
+            save_status (user_id,username,'F007')
+            message_out = '7.Пришлите фото водительского удостоверения(лицевая сторона)!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F007': 
+            save_param (user_id,7,src)
+            save_status (user_id,username,'F008')
+            message_out = '8.Пришлите фото водительского удостоверения (обратная сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F008': 
+            save_param (user_id,8,src)
+            save_status (user_id,username,'F009')
+            message_out = '9.Пришлите фото Справки о наличии(отсутствии судимости)-если нет то напишите слово-НЕТ!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F009': 
+            save_param (user_id,9,src)
+            save_status (user_id,username,'F010')
+            message_out = '10.Пришлите фото Медицинской справки-если нет то напишите слово-НЕТ!'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F010': 
+            save_param (user_id,10,src)
+            save_status (user_id,username,'F011')
+            message_out = '11.Пришлите фото Лицензии на осуществеление таксомоторной деятельности.(ЛИЦЕВАЯ СТОРОНА)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F011': 
+            save_param (user_id,11,src)
+            save_status (user_id,username,'F012')
+            message_out = '12.Пришлите фото ОСАГО(лицевая сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F012': 
+            save_param (user_id,12,src)
+            save_status (user_id,username,'F013')
+            message_out = '13.Пришлите фото ОСАГО(обратная сторона)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F013': 
+            save_param (user_id,13,src)
+            save_status (user_id,username,'F014')
+            message_out = '14.Пришлите фото автомобиля сбоку(Гос.Номер должен быть виден)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F014': 
+            save_param (user_id,14,src)
+            save_status (user_id,username,'F015')
+            message_out = '15.Пришлите фото автомобиля(задние сиденья)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F015': 
+            save_param (user_id,15,src)
+            save_status (user_id,username,'F016')
+            message_out = '16.Пришлите фото детского кресла(если нет пишем слово НЕТ)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F016': 
+            save_param (user_id,16,src)
+            save_status (user_id,username,'F017')
+            message_out = '17.Пришлите фото Паспорта(Разворот с фотографией)'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+            
+        if status == 'F017': 
+            save_param (user_id,17,src)
             save_status (user_id,username,'finish')
-            markup = menu_agreg ()
-            message_out = 'Прошу Вас выслать фотографии документов с 2-х сторон:  справка об отсутствии судимости.'
-            bot.send_message(user_id,message_out,parse_mode='HTML',reply_markup=markup)
+            message_out = '18.В каком городе планируете работать?'
+            bot.send_message(user_id,message_out,parse_mode='HTML')
+  
           
         if status == 'finish':            
             save_param (user_id,5,src)
@@ -442,18 +920,3 @@ def handle_docs_photo(message):
          
             
 bot.polling()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
